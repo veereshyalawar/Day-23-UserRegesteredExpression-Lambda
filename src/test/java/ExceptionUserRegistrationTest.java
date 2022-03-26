@@ -1,9 +1,10 @@
+
 import org.junit.Assert;
 import org.junit.Test;
 
 /**
  * @author veeresh
- * testCases for validating firstName
+ * testCases for validating lastName
  *
  */
 public class ExceptionUserRegistrationTest {
@@ -11,25 +12,25 @@ public class ExceptionUserRegistrationTest {
 
 	@Test
 	/**
-	 * created method givenFirstName_IsProper_ReturnTrue() for true condition
+	 * created method givenLastName_IsProper_ReturnTrue() for true condition
 	 */
-	public void givenFirstName_IsProper_ReturnTrue() {
+	public void givenLastName_IsProper_ReturnTrue() {
 		/**
-		 * calling firstName method to see first name is valid or not
+		 * calling lastName method to see last name is valid or not
 		 */
-		boolean actualResult = exceptionUserRegistration.firstName("Veer");
+		boolean actualResult = exceptionUserRegistration.lastName("Yalawar");
 		Assert.assertEquals(true, actualResult);
-		}
+	}
 
 	@Test
 	/**
-	 * created method givenFirstName_IsProper_ReturnFalse() for false condition
+	 * created method givenLastName_IsProper_ReturnFalse() for false condition
 	 */
-	public void givenFirstName_IsProper_ReturnFalse() {
+	public void givenLastName_IsProper_ReturnFalse() {
 		/**
-		 * calling firstName method to see first name is valid or not
+		 * calling lastName method to see last name is valid or not
 		 */
-		boolean actualResult = exceptionUserRegistration.firstName("veer");
+		boolean actualResult = exceptionUserRegistration.lastName("yalawar");
 		Assert.assertEquals(false, actualResult);
 	}
 }
