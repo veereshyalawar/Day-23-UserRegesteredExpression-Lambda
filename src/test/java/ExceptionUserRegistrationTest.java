@@ -4,23 +4,25 @@ import org.junit.Test;
 public class ExceptionUserRegistrationTest {
 	ExceptionUserRegistration exceptionUserRegistration = new ExceptionUserRegistration();
 
+
+
 	@Test
 	/**
 	 * @author veeresh
-	 * created method givenMobileNumber_IsProper_ReturnTrue() for true condition
+	 * created method givePasswordRule1_IsProper_ReturnTrue() for true condition
 	 */
-	public void givenMobileNumber_IsProper_ReturnTrue() {
-		boolean actualResult = exceptionUserRegistration.phoneNumber("91 8867743684");
+	public void givenPasswordRule1_IsProper_ReturnTrue() {
+		boolean actualResult = exceptionUserRegistration.passwordRule1("aBcdeFghiM");
 		Assert.assertEquals(true, actualResult);
 	}
 
 	@Test
 	/**
-	 * created method givenMobileNumber_IsNotProper_ReturnFalse() for false
+	 * created method givePasswordRule1_IsNotProper_ReturnFalse() for false
 	 * condition
 	 */
-	public void givenMobileNumber_IsNotProper_ReturnFalse() {
-		boolean actualResult = exceptionUserRegistration.phoneNumber("81 23452565674875");
+	public void givenPasswordRule1_IsNotProper_ReturnFalse() {
+		boolean actualResult = exceptionUserRegistration.passwordRule1("abCd");
 		Assert.assertEquals(false, actualResult);
 	}
 }
