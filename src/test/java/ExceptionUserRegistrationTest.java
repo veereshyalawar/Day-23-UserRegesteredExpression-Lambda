@@ -1,13 +1,14 @@
-
 import org.junit.Assert;
 import org.junit.Test;
 
 public class ExceptionUserRegistrationTest {
 	ExceptionUserRegistration exceptionUserRegistration = new ExceptionUserRegistration();
-
+   
 	/**
-	 * test case for rule1 and rule2
-	 */
+	 * 
+	 * @author veeresh
+     * Test cases for Rule1,Rule2 and Rule3
+     */
 	
 	@Test
 	/**
@@ -44,6 +45,25 @@ public class ExceptionUserRegistrationTest {
 	 */
 	public void givenPasswordRule2_IsNotProper_ReturnFalse() {
 		boolean actualResult = exceptionUserRegistration.passwordRule2("jnsdjcvcp");
+		Assert.assertEquals(false, actualResult);
+	}
+
+	@Test
+	/**
+	 * created method givePasswordRule3_IsProper_ReturnTrue() for true condition
+	 */
+	public void givenPasswordRule3_IsProper_ReturnTrue() {
+		boolean actualResult = exceptionUserRegistration.passwordRule3("Almas786");
+		Assert.assertEquals(true, actualResult);
+	}
+
+	@Test
+	/**
+	 * created method givePasswordRule3_IsNotProper_ReturnFalse() for false
+	 * condition
+	 */
+	public void givenPasswordRule3_IsNotProper_ReturnFalse() {
+		boolean actualResult = exceptionUserRegistration.passwordRule3("Almashgds");
 		Assert.assertEquals(false, actualResult);
 	}
 }
