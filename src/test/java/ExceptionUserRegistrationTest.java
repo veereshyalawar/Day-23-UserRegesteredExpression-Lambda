@@ -1,36 +1,24 @@
-
 import org.junit.Assert;
 import org.junit.Test;
 
-/**
- * @author veeresh
- * testCases for validating lastName
- *
- */
 public class ExceptionUserRegistrationTest {
 	ExceptionUserRegistration exceptionUserRegistration = new ExceptionUserRegistration();
 
 	@Test
 	/**
-	 * created method givenLastName_IsProper_ReturnTrue() for true condition
+	 * created method givenEmailId_IsProper_ReturnTrue() for true condition
 	 */
-	public void givenLastName_IsProper_ReturnTrue() {
-		/**
-		 * calling lastName method to see last name is valid or not
-		 */
-		boolean actualResult = exceptionUserRegistration.lastName("Yalawar");
+	public void givenEmailId_IsProper_ReturnTrue() {
+		boolean actualResult = exceptionUserRegistration.email("veereshyalawar2@gmail.com");
 		Assert.assertEquals(true, actualResult);
 	}
 
 	@Test
 	/**
-	 * created method givenLastName_IsProper_ReturnFalse() for false condition
+	 * created method givenEmailId_IsNotProper_ReturnFalse() for false condition
 	 */
-	public void givenLastName_IsProper_ReturnFalse() {
-		/**
-		 * calling lastName method to see last name is valid or not
-		 */
-		boolean actualResult = exceptionUserRegistration.lastName("yalawar");
+	public void givenEmailId_IsNotProper_ReturnFalse() {
+		boolean actualResult = exceptionUserRegistration.email("veeresh.comgmail");
 		Assert.assertEquals(false, actualResult);
 	}
 }
