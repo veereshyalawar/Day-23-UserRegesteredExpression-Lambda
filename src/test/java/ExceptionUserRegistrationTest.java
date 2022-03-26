@@ -1,15 +1,14 @@
+
 import org.junit.Assert;
 import org.junit.Test;
 
 public class ExceptionUserRegistrationTest {
 	ExceptionUserRegistration exceptionUserRegistration = new ExceptionUserRegistration();
-   
-	/**
-	 * 
-	 * @author veeresh
-     * Test cases for Rule1,Rule2 and Rule3
+
+    /**
+     * @author veeresh
+     * Test cases to clear Rule1,Rule2.Rule3&Rule4
      */
-	
 	@Test
 	/**
 	 * created method givePasswordRule1_IsProper_ReturnTrue() for true condition
@@ -64,6 +63,25 @@ public class ExceptionUserRegistrationTest {
 	 */
 	public void givenPasswordRule3_IsNotProper_ReturnFalse() {
 		boolean actualResult = exceptionUserRegistration.passwordRule3("Almashgds");
+		Assert.assertEquals(false, actualResult);
+	}
+
+	@Test
+	/**
+	 * created method givePasswordRule4_IsProper_ReturnTrue() for true condition
+	 */
+	public void givenPasswordRule4_IsProper_ReturnTrue() {
+		boolean actualResult = exceptionUserRegistration.passwordRule4("Almas@786");
+		Assert.assertEquals(true, actualResult);
+	}
+
+	@Test
+	/**
+	 * created method givePasswordRule4_IsNotProper_ReturnFalse() for false
+	 * condition
+	 */
+	public void givenPasswordRule4_IsNotProper_ReturnFalse() {
+		boolean actualResult = exceptionUserRegistration.passwordRule4("Almas786");
 		Assert.assertEquals(false, actualResult);
 	}
 }
