@@ -6,19 +6,21 @@ public class ExceptionUserRegistrationTest {
 
 	@Test
 	/**
-	 * created method givenEmailId_IsProper_ReturnTrue() for true condition
+	 * @author veeresh
+	 * created method givenMobileNumber_IsProper_ReturnTrue() for true condition
 	 */
-	public void givenEmailId_IsProper_ReturnTrue() {
-		boolean actualResult = exceptionUserRegistration.email("veereshyalawar2@gmail.com");
+	public void givenMobileNumber_IsProper_ReturnTrue() {
+		boolean actualResult = exceptionUserRegistration.phoneNumber("91 8867743684");
 		Assert.assertEquals(true, actualResult);
 	}
 
 	@Test
 	/**
-	 * created method givenEmailId_IsNotProper_ReturnFalse() for false condition
+	 * created method givenMobileNumber_IsNotProper_ReturnFalse() for false
+	 * condition
 	 */
-	public void givenEmailId_IsNotProper_ReturnFalse() {
-		boolean actualResult = exceptionUserRegistration.email("veeresh.comgmail");
+	public void givenMobileNumber_IsNotProper_ReturnFalse() {
+		boolean actualResult = exceptionUserRegistration.phoneNumber("81 23452565674875");
 		Assert.assertEquals(false, actualResult);
 	}
 }
